@@ -1,0 +1,33 @@
+*{
+    background-color: rgb(255, 255, 255);
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+ul{
+    display: flex;
+    gap: 20px;
+}
+
+ul li{
+    list-style-type: none;
+    color: #575757;
+    
+}
+
+.common-button{
+    border: none;
+    border-radius: 6px;
+    color: #feffff;
+    background-color: #1D4ED8;
+    cursor: pointer;
+    padding: 10px 25px;
+}
+
+.banner{
+    background-image: url('./assets/banner.jpg');
+}
