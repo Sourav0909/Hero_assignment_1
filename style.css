@@ -1,6 +1,8 @@
 *{
-    background-color: rgb(255, 255, 255);
+    max-width: 1000px;
+    align-items: center;
 }
+
 
 nav{
     display: flex;
@@ -28,6 +30,27 @@ ul li{
     padding: 10px 25px;
 }
 
-.banner{
+.banner {
     background-image: url('./assets/banner.jpg');
+    background-size: cover;       
+    background-position: center;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.banner-text{
+    color: white;
+    background-color: none;
+}
+
+.banner p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 500px;
 }
