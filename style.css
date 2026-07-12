@@ -11,12 +11,12 @@ nav {
 
 }
 
-ul {
+.nav-links {
     display: flex;
     gap: 20px;
 }
 
-ul li {
+.nav-links li {
     list-style-type: none;
     color: #575757;
 
@@ -57,10 +57,15 @@ ul li {
 }
 
 .speakers {
-    margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
+}
+
+.speaker-title{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .card {
@@ -90,4 +95,44 @@ ul li {
 .card-subtitle{
     color: #575757;
     font-size: 14px;
+}
+
+.standard-button{
+    border: solid;
+    border-radius: 6px;
+    border-width: 1px;
+    color: #1D4ED8;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px 25px;
+}
+
+.team-button{
+    border: solid;
+    border-radius: 6px;
+    border-width: 1px;
+    color: #000000;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px 25px;
+}
+
+.sub-facilities{
+    /* list-style-type: none; */
+}
+
+.sub-box{
+    border: 1px solid #888888;
+    width: 280px;
+    height: 300px;
+    border-radius: 8px;
+
+}
+
+.sub-container{
+    display: flex;
+}
+
+.sub-button{
+    align-items: center;
 }
