@@ -30,6 +30,14 @@ nav {
     background-color: #1D4ED8;
     cursor: pointer;
     padding: 10px 25px;
+    transition: background-color 0.3s ease;
+}
+.common-button:hover{
+    border: solid;
+    border-radius: 6px;
+    border-width: 1px;
+    color: #A5C3F4;
+    background-color: transparent;
 }
 
 .banner {
@@ -51,10 +59,11 @@ nav {
 }
 
 .banner p {
-    font-size: 16px;
+    font-size: 10px;
     font-weight: 400;
     line-height: 1.5;
-    max-width: 500px;
+    max-width: 350px;
+    color: #E6E7E7;
 }
 
 .speakers {
@@ -106,6 +115,11 @@ nav {
     background-color: transparent;
     cursor: pointer;
     padding: 10px 25px;
+    transition: background-color 0.3s ease;
+}
+.standard-button:hover{
+    background-color: #2B4DD0;
+    color: #ffffff;
 }
 
 .team-button{
@@ -116,6 +130,11 @@ nav {
     background-color: transparent;
     cursor: pointer;
     padding: 10px 25px;
+    transition: background-color 0.3s ease;
+}
+.team-button:hover{
+    background-color: #2B4DD0;
+    color: #ffffff;
 }
 
 .sub-facilities{
@@ -153,12 +172,18 @@ nav {
     align-self: stretch; 
 }
 
-.sub-box h5{
+.sub-box{
+    h5{
     color: #888888;
     }
     p{
     color: #888888;
     font-size: 12px;
+    }
+    transition: transform 0.2s ease-in-out;
+}
+.sub-box:hover{
+    transform: scale(1.03);
 }
 
 .sub-box hr{
@@ -191,3 +216,55 @@ nav {
     padding: 10px 0px;
     }
 }
+
+/* ----------------------- Ai created section ------------------------------*/
+
+.sponsors-section {
+            padding: 80px 20px;
+            background-color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            border-top: 1px solid #f3f4f6; /* Subtle separator from previous section */
+        }
+
+        .sponsors-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .sponsors-title {
+            font-size: 2.25rem; /* Matches the visual weight of other headers */
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 3rem;
+            letter-spacing: -0.025em;
+        }
+
+        /* Flexbox layout for the logos */
+        .sponsors-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem 4rem; /* Vertical gap, Horizontal gap */
+        }
+
+        /* Standardized logo sizing */
+        .sponsor-logo {
+            max-width: 180px;
+            max-height: 48px; /* Restricts height to make different aspect ratios look uniform */
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            /* Optional: Grayscale effect that turns colorful on hover (common for sponsor sections) */
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .sponsor-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.05);
+        }
