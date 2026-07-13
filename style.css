@@ -1,6 +1,5 @@
 * {
     max-width: 1000px;
-    align-items: center;
     margin: 2px;
     font-family: sans-serif;
 }
@@ -267,4 +266,119 @@ nav {
             filter: grayscale(0%);
             opacity: 1;
             transform: scale(1.05);
+        }
+
+        /* FAQ Section (Ai generated) */
+
+        .faq-section {
+            padding: 30px 20px;
+        }
+
+        .faq-container {
+            max-width: 700px;
+            max-height: 250px;
+            margin: 0 auto;
+        }
+
+        .faq-title {
+            text-align: center;
+            font-size: 2.25rem;
+            font-weight: 800;
+            /* Using a gradient text effect for more color */
+            background: linear-gradient(135deg, #111827 0%, #4f46e5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 3rem;
+            letter-spacing: -0.025em;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem; /* Increased gap between items */
+        }
+
+        /* Individual Accordion Items - Made softer */
+        .faq-item {
+            background-color: #ffffff;
+            /* Removed the solid border and used a soft shadow instead */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-radius: 1.25rem; /* Large, smooth rounded corners */
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        /* Subtle hover effect for the whole card */
+        .faq-item:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+
+        /* Question (Clickable area) */
+        .faq-question {
+            padding: 1.0rem 1.25rem; /* Reduced padding to decrease height */
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #1e3a8a; /* A richer, deeper blue */
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* A very subtle gradient background */
+            background: linear-gradient(to right, #ffffff, #f5f3ff);
+            transition: all 0.3s ease;
+        }
+
+        .faq-question::-webkit-details-marker {
+            display: none;
+        }
+
+        /* When open, the background changes slightly */
+        .faq-item[open] .faq-question {
+            background: linear-gradient(to right, #f5f3ff, #ede9fe);
+        }
+
+        /* Custom Plus/Minus Icon - Now a colorful circle */
+        .faq-question::after {
+            content: '+';
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: #3b82f6; /* Blue circle */
+            width: 2.0rem;
+            height: 2.0rem;
+            border-radius: 50%;
+            display: flex; /* Added flex to center content */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            transition: all 0.3s ease;
+            flex-shrink: 0; /* Prevents the circle from squishing */
+            margin-left: 1rem;
+        }
+
+        /* When open, rotate and change color */
+        .faq-item[open] .faq-question::after {
+            content: '−'; /* En dash */
+            transform: rotate(180deg);
+            background-color: #8b5cf6; /* Purple circle when open */
+        }
+
+        /* Answer text */
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem 1.5rem; /* Reduced padding to decrease height */
+            color: #4b5563;
+            line-height: 1.7; /* More breathing room for text */
+            font-size: 1.05rem;
+        }
+
+        .faq-item[open] .faq-answer {
+            padding-top: 0.75rem; /* Reduced padding to decrease height */
+            animation: fadeIn 0.6s ease-in-out; /* Slowed down animation */
+        }
+
+        /* Smooth fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
